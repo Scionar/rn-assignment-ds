@@ -1,7 +1,15 @@
 import React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 
-const TextField = ({ onChangeText, secureTextEntry, value }) => {
+import colors from '@ds/styles/colors';
+
+type TTextField = {
+  onChangeText: (text: string) => void;
+  secureTextEntry?: boolean;
+  value: string;
+};
+
+const TextField = ({ onChangeText, secureTextEntry, value }: TTextField) => {
   return (
     <View style={styles.container}>
       <TextInput
@@ -20,9 +28,9 @@ const styles = StyleSheet.create({
   container: { flexGrow: 1, justifyContent: 'center' },
   textInput: {
     height: 44,
-    backgroundColor: '#ffffff',
+    backgroundColor: colors.white,
     borderWidth: 1,
-    borderColor: '#202020',
+    borderColor: colors.black,
     borderRadius: 6,
     padding: 5,
   },

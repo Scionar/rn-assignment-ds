@@ -15,7 +15,7 @@ See: https://reactnative.dev/docs/environment-setup
 ## Project Installation
 
 1. Install 3rd party packages with `yarn`
-2. Install pods with `pod install` (in _/ios_ folder)
+2. Install pods with `pod install` (in _ios_ folder)
 
 ## Running
 
@@ -24,9 +24,9 @@ See: https://reactnative.dev/docs/environment-setup
 
 ## Source Code Location and Structure
 
-All relevant code for React Native can be found under _/src_ folder. This folder is referenced with namespace **@ds**.
+All relevant code for React Native can be found under _src_ folder. This folder is referenced with namespace **@ds**.
 
-Design System Components and other components can be found under _/src/components_ folder.
+Design System Components and other components can be found under _src/components_ folder.
 
 All the styling for related screen or component are applied in the **.tsx** file itself.
 
@@ -34,4 +34,4 @@ All the styling for related screen or component are applied in the **.tsx** file
 
 TypeScript compiler and checking is executed with `yarn tsc`.
 
-Unit Tests are executed with `yarn test`.
+Actual tests are located in \_\_\_tests\_\_\_ folder. Tests are executed with `yarn test`.

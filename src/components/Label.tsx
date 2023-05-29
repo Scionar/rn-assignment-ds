@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
+import colors from '@ds/styles/colors';
+
 type TLabel = {
   children: React.ReactNode;
 };
@@ -11,7 +13,7 @@ const Label = ({ children }: TLabel) => {
 
 const styles = StyleSheet.create({
   label: {
-    color: '#202020',
+    color: colors.black,
     fontSize: 16,
     fontWeight: 'bold',
     alignSelf: 'center',
