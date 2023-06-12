@@ -5,13 +5,15 @@ import renderer, { act } from 'react-test-renderer';
 import { TextInput } from 'react-native';
 
 it('renders correctly', () => {
-  renderer.create(<TextField value={''} onChangeText={() => {}} />);
+  renderer.create(
+    <TextField label="Test" value={''} onChangeText={() => {}} />,
+  );
 });
 
 it('renders value', () => {
   const value = 'Test';
   const valueRenderer = renderer.create(
-    <TextField value={value} onChangeText={() => {}} />,
+    <TextField label="Test" value={value} onChangeText={() => {}} />,
   );
   const valueInstance = valueRenderer.root;
 
