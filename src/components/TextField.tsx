@@ -9,6 +9,7 @@ type TTextField = {
   secureTextEntry?: boolean;
   value: string;
   error?: string;
+  inputMode?: 'text' | 'email' | 'numeric';
 };
 
 const TextField = ({
@@ -17,6 +18,7 @@ const TextField = ({
   secureTextEntry,
   value,
   error,
+  inputMode = 'text',
 }: TTextField) => {
   const accessibilityLabel = error ? `${label}, ${error}` : label;
 
@@ -36,6 +38,7 @@ const TextField = ({
         value={value}
         secureTextEntry={secureTextEntry}
         accessibilityLabel={accessibilityLabel}
+        inputMode={inputMode}
       />
       <Text
         style={styles.errorText}

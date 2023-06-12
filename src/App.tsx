@@ -75,6 +75,7 @@ const App = () => {
               value={userId}
               onChangeText={handleUserId}
               error={userIdError}
+              inputMode="numeric"
             />
           </View>
           <View style={styles.row}>
@@ -83,6 +84,7 @@ const App = () => {
               value={email}
               onChangeText={setEmail}
               error={emailError}
+              inputMode="email"
             />
           </View>
           <View style={styles.row}>
