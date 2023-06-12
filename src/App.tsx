@@ -9,7 +9,6 @@ import {
   View,
 } from 'react-native';
 import TextField from '@ds/components/TextField';
-import Label from '@ds/components/Label';
 import ActionButton from '@ds/components/ActionButton';
 
 import { validateUserId } from '@ds/utils/validation';

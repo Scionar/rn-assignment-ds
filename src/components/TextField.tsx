@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 import colors from '@ds/styles/colors';
-import Label from './Label';
 
 type TTextField = {
   label: string;
@@ -23,7 +22,12 @@ const TextField = ({
 
   return (
     <View style={styles.container}>
-      <Label>{label}</Label>
+      <Text
+        style={styles.label}
+        importantForAccessibility="no"
+        accessibilityElementsHidden>
+        {label}
+      </Text>
       <TextInput
         style={styles.textInput}
         autoCapitalize={'none'}
@@ -45,6 +49,14 @@ const TextField = ({
 
 const styles = StyleSheet.create({
   container: { flexGrow: 1, alignItems: 'stretch', flexDirection: 'column' },
+  label: {
+    color: colors.black,
+    fontSize: 16,
+    fontWeight: 'bold',
+    alignSelf: 'flex-start',
+    marginRight: 10,
+    minWidth: '25%',
+  },
   textInput: {
     height: 44,
     backgroundColor: colors.white,
