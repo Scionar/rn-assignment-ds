@@ -38,7 +38,7 @@ const App = () => {
     <SafeAreaView>
       <StatusBar />
       <ScrollView style={styles.wrapper}>
-        <View style={styles.headerContainer}>
+        <View style={styles.headerContainer} accessibilityRole="header">
           <Text style={styles.header}>{'DS Assignment Login Form'}</Text>
         </View>
         <View style={styles.contentContainer}>
