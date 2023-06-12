@@ -27,7 +27,7 @@ const ActionButton = ({ disabled, label, onPress }: TActionButton) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#6699cc',
+    backgroundColor: colors.button,
     padding: 10,
     borderColor: '#336699',
     borderWidth: 1,
