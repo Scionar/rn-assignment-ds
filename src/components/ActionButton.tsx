@@ -3,7 +3,13 @@ import { Pressable, StyleSheet, Text } from 'react-native';
 
 import colors from '@ds/styles/colors';
 
-const ActionButton = ({ disabled, label, onPress }) => {
+type TActionButton = {
+  disabled?: boolean;
+  label: string;
+  onPress: () => void;
+};
+
+const ActionButton = ({ disabled, label, onPress }: TActionButton) => {
   const getButtonStyling = () =>
     disabled ? { backgroundColor: '#a0a0a0', borderColor: '#666666' } : {};
 
