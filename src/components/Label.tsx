@@ -8,7 +8,14 @@ type TLabel = {
 };
 
 const Label = ({ children }: TLabel) => {
-  return <Text style={styles.label}>{children}</Text>;
+  return (
+    <Text
+      style={styles.label}
+      importantForAccessibility="no"
+      accessibilityElementsHidden>
+      {children}
+    </Text>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -16,7 +23,7 @@ const styles = StyleSheet.create({
     color: colors.black,
     fontSize: 16,
     fontWeight: 'bold',
-    alignSelf: 'center',
+    alignSelf: 'flex-start',
     marginRight: 10,
     minWidth: '25%',
   },
