@@ -11,7 +11,11 @@ import {
 import TextField from '@ds/components/TextField';
 import ActionButton from '@ds/components/ActionButton';
 
-import { validateIsRequired, validateUserId } from '@ds/utils/validation';
+import {
+  validateEmail,
+  validateIsRequired,
+  validateUserId,
+} from '@ds/utils/validation';
 import colors from '@ds/styles/colors';
 
 const App = () => {
@@ -30,17 +34,21 @@ const App = () => {
   };
 
   const onSubmitPress = () => {
-    if (validateIsRequired(userId)) {
-      setUserIdError('User ID is required');
-    }
+    validateEmail(email)
+      ? setEmailError('')
+      : setEmailError('Email should be valid');
 
     validateIsRequired(userId)
       ? setUserIdError('')
       : setUserIdError('User ID is required');
 
-    validateIsRequired(email)
-      ? setEmailError('')
-      : setEmailError('Email is required');
+    if (!validateIsRequired(email)) {
+      setEmailError('Email is required');
+    } else if (!validateEmail(email)) {
+      setEmailError('Email should be valid');
+    } else {
+      setEmailError('');
+    }
 
     validateIsRequired(password)
       ? setPasswordError('')
