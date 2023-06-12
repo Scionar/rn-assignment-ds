@@ -43,16 +43,18 @@ const App = () => {
         </View>
         <View style={styles.contentContainer}>
           <View style={styles.row}>
-            <Label>{'User #ID'}</Label>
-            <TextField value={userId} onChangeText={handleUserId} />
-          </View>
-          <View style={styles.row}>
-            <Label>{'E-mail'}</Label>
-            <TextField value={email} onChangeText={setEmail} />
-          </View>
-          <View style={styles.row}>
-            <Label>{'Password'}</Label>
             <TextField
+              label="User #ID"
+              value={userId}
+              onChangeText={handleUserId}
+            />
+          </View>
+          <View style={styles.row}>
+            <TextField label="E-mail" value={email} onChangeText={setEmail} />
+          </View>
+          <View style={styles.row}>
+            <TextField
+              label="Password"
               value={password}
               onChangeText={setPassword}
               secureTextEntry={true}
