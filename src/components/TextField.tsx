@@ -33,7 +33,12 @@ const TextField = ({
         secureTextEntry={secureTextEntry}
         accessibilityLabel={accessibilityLabel}
       />
-      <Text style={styles.errorText}>{error}</Text>
+      <Text
+        style={styles.errorText}
+        importantForAccessibility="no"
+        accessibilityElementsHidden>
+        {error}
+      </Text>
     </View>
   );
 };
