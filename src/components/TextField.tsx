@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     color: colors.red,
+    fontWeight: '600',
     paddingTop: 5,
   },
 });

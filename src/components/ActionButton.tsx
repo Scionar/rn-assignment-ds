@@ -30,11 +30,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#6699cc',
     padding: 10,
     borderColor: '#336699',
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 6,
     justifyContent: 'center',
   },
-  buttonText: { color: colors.white, fontSize: 20, textAlign: 'center' },
+  buttonText: {
+    color: colors.white,
+    fontSize: 20,
+    fontWeight: '500',
+    textAlign: 'center',
+  },
 });
 
 export default ActionButton;
