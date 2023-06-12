@@ -17,7 +17,9 @@ const ActionButton = ({ disabled, label, onPress }: TActionButton) => {
     <Pressable
       style={[styles.button, getButtonStyling()]}
       onPress={onPress}
-      disabled={disabled}>
+      disabled={disabled}
+      role="button"
+      accessibilityState={{ disabled }}>
       <Text style={styles.buttonText}>{label}</Text>
     </Pressable>
   );
